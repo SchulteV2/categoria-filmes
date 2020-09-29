@@ -3,3 +3,15 @@ backend
 
 npm i --save -E body-parser@1.5.2 express@4.14.0 mongoose@4.7.0 node-restful@0.2.5 pm2@2.1.5
 npm i --save-dev -E nodemon@1.11.0
+
+Para rodar o server de dev
+npm run dev
+
+rodar o server de production
+npm run production
+
+para ver o status
+.\node_modules\.bin\pm2 status
+
+para abrir o monitoramento
+.\node_modules\.bin\pm2 monit
