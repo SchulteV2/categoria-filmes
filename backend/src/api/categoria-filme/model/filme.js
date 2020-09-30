@@ -15,11 +15,6 @@ const filmesSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId, 
         ref: 'Categoria',
         index: true 
-    },
-    usuarioId: {
-        type: Schema.Types.ObjectId,
-        ref: 'Usuario',
-        index: true
     }
 })
 

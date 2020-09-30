@@ -13,8 +13,4 @@ module.exports = function(server) {
     // filme Routes
     const filmeService = require('../api/categoria-filme/service/filmeService')
     filmeService.register(router, '/filme')
-    
-    // usuario Routes
-    const filmeService = require('../api/categoria-filme/service/usuarioService')
-    filmeService.register(router, '/usuario')
 }
