@@ -2,12 +2,12 @@ import 'modules/bootstrap/dist/css/bootstrap.min.css'
 import 'modules/font-awesome/css/font-awesome.min.css'
 
 import React from 'react'
-import Categoria from '../categoria/categoria'
-import Filme from '../filme/filme'
+import Menu from '../template/menu'
+import Routes from './routes'
 
 export default props => (
     <div className='container'>
-        <Categoria />
-        <Filme />
+        <Menu />
+        <Routes />
     </div>
 )
