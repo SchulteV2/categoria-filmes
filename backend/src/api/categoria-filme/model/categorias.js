@@ -2,9 +2,14 @@ const restful = require('node-restful')
 const mongoose = restful.mongoose
 
 const categoriaSchema = new mongoose.Schema({
-    catName: { 
+    nome: { 
         type: String, 
         required: true 
+    },
+    usuarioId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Usuario',
+        index: true
     }
 })
 

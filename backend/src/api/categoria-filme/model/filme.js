@@ -3,7 +3,7 @@ const restful = require('node-restful')
 const mongoose = restful.mongoose
 
 const filmesSchema = new mongoose.Schema({
-    filmeName: { 
+    nome: { 
         type: String, 
         required: true
     },
@@ -11,10 +11,15 @@ const filmesSchema = new mongoose.Schema({
         type: Number, 
         require: true 
     },
-    categoria: { 
+    categoriaId: { 
         type: Schema.Types.ObjectId, 
         ref: 'Categoria',
         index: true 
+    },
+    usuarioId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Usuario',
+        index: true
     }
 })
 

@@ -7,10 +7,14 @@ module.exports = function(server) {
     server.use('/api', router)
 
     // cat Routes
-    const catService = require('../api/cat-film/service/catService')
-    catService.register(router, '/cats')
+    const catService = require('../api/categoria-filme/service/categoriaService')
+    catService.register(router, '/categoria')
 
     // filme Routes
-    const filmeService = require('../api/cat-film/service/filmeService')
-    filmeService.register(router, '/filmes')
+    const filmeService = require('../api/categoria-filme/service/filmeService')
+    filmeService.register(router, '/filme')
+    
+    // usuario Routes
+    const filmeService = require('../api/categoria-filme/service/usuarioService')
+    filmeService.register(router, '/usuario')
 }
