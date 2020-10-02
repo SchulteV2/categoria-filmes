@@ -8,8 +8,8 @@ import Filme from '../filme/filme'
 
 export default props => (
     <HashRouter>
-        <Route path='/categorias' component={Categoria} />
-        <Route path='/filmes' component={Filme} />
-        <Redirect from='*' to='/categorias' />
+        <Route path='/categoria' component={Categoria} />
+        <Route path='/filme' component={Filme} />
+        <Redirect from='*' to='/categoria' />
     </HashRouter>
 )
