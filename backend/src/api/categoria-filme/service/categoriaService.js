@@ -1,4 +1,4 @@
-const Categoria = require('../model/categorias')
+const Categoria = require('../model/categoria')
 
 Categoria.methods(['get', 'post', 'put', 'delete'])
 Categoria.updateOptions({new: true, runValidators: true})
