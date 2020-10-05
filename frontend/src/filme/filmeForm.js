@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Grid from '../template/grid'
 import IconButton from '../template/iconButton'
 
 const URL = 'http://localhost:3003/api/filme'
@@ -15,7 +14,7 @@ export default () => {
     
     const handleAdd = () => {
         axios.post(URL, { nome, duracao, categoriaId })
-            .then(resp => console.log('Funcionou!'))
+            .then(resp => window.location.reload())
     }
 
     useEffect(() => {
@@ -28,7 +27,7 @@ export default () => {
 
     return (
         <div role='form' className='filmeForm'>
-            <Grid cols='12 9 10'>
+            <div className='col-xs-12 col-sm-9 col-md-10'>
                 <input id='nome' className='form-control'
                     placeholder='Nome do filme'
                     onChange={e => setNome(e.target.value)}
@@ -42,11 +41,11 @@ export default () => {
                         <option key={category._id} value={category._id}>{category.nome}</option>
                     ))}
                 </select>
-            </Grid>
-            <Grid cols='12 3 2'>
+            </div>
+            <div className='col-xs-12 col-sm-3 col-md-2'>
                 <IconButton styled='primary' icon='plus'
                     onClick={handleAdd}></IconButton>
-            </Grid>
+            </div>
         </div>
     )
 }
